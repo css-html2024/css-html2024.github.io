@@ -69,7 +69,7 @@
 			.MOTD_Attribute::before {content: "--"}
 
 			#social_medias {
-				display: block;
+				display: flex;
 				box-sizing: border-box;
 
 				padding: 8px;
@@ -80,18 +80,49 @@
 				background-color: antiquewhite;
 
 				border-radius: 16px;
+				
+				gap: 8px;
 			}
 			#social_medias > a {
-				font-size: 300%;
+				font-size: 200%;
 				color: rgb(85, 85, 85);
 				text-decoration: none;
+				align-items: center;
+				display: flex;
 			}
 
-			.Intro {
+			.Headline {
 				text-align: center;
+				margin: 8px 0;
+			}
+			.About_Me {
+				background: #756a61af;
+				backdrop-filter: blur(4px);
+				border-radius: 48px;
+		    box-shadow: 4px 4px 4px #4b4a4d;
+
+				display: block;
+				box-sizing: border-box;
+				margin: auto;
+				padding: 16px;
+
+				width: 80%;
+				max-width: 640px;
+				aspect-ratio: 4 / 3;
+			}
+			.About_Me > p {
+				white-space: pre-line;
 			}
 			.Projects {
 				text-align: center;
+			}
+			footer {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				height: 10vh;
+				margin: 2px 12px;
+				margin-top: 20vh;
 			}
 		</style>
 	</head>
@@ -100,12 +131,11 @@
 		    <div class=header_filter></div>
 			<div class="MOTD_Card">
 				<span class="MOTD_Content">...I can see in the dark, you know!<br> The question is...<br>Can you?</span>
-				<a class="MOTD_Attribute" href="https://deltarune.wiki/w/Shadow_Mantle_holder#:~:text=I%20can,you,-%3F">Shadow Mantle Holder</a>
+				<a class="MOTD_Attribute" href="https://youtu.be/MAfd02R8W-U?t=1536">Shadow Mantle Holder, DELTARUNE</a>
 			</div>
 		</header>
 		<div class="Intro">
-			<h1 class="Intro Headline">This is SpreadingIllogical's page</h1>
-			<!-- <a href="#" class="Intro GotoAboutMe">#AboutMe</a> -->
+			<h1 class="Headline">This is SpreadingIllogical's page</h1>
 			<div id="social_medias">
 				<a href="https://github.com/css-html2024">
 					<i class="bi bi-github"></i>
@@ -113,11 +143,29 @@
 				<a href="https://youtube.com/@SpreadingIllogical">
 					<i class="bi bi-youtube"></i>
 				</a>
+				<a href="https://www.youtube.com/watch?v=rGmiPTmj8eM">
+					<img style="width: 1em; height: 1em" src="https://googlegiggles.com/favicon.jpg"></img>
+				</a>
 			</div>
 		</div>
+		<div class="About_Me">
+			<h1 class="Headline">About Me...</h1>
+			<p>
+			Hi! I'm <b>SpreadingIllogical</b>, or <b>Slogical</b>, known with the username <i>css_html2024</i>.
+			I'm a secondary school student in &#x1F1ED;&#x1F1F0; HK, which has a great <b>passion in Computer Science, Information Technology and a teeny electronics engineering</b> (?)
+			Being a hobbyist, I mainly uses <b>Python, JavaScript, Lua, Rust</b> (and maybe some <b>C++</b>) for my programs, but my main focus on front-end web structure are <b>HTML, CSS & JS</b> and SQL & express.js for back-end.
+			
+			Little known fact: I do luv Kasane Teto, specifically the UTAU ver. :D
+			</p>
+		</div>
 		<div class="Projects">
-			<h2 class="Projects Headline">Cool projects you should check out!!</h2>
+			<h2 class="Headline">Cool projects you should check out!!</h2>
 			<span style="font-style: italic; color:#c8c6a7">Stay tuned!</span>
 		</div>
+		<footer>
+			<span>Mangrove is made with &#x2764;&#xfe0f; by Slogical.</span>
+			<span><img alt="AI assist Badge" src="https://www.aihonestybadge.com/badges/ai-assisted-small.svg"> This website is built with the help of AI.</span>
+		</footer>
 	</body>
 </html>
+
