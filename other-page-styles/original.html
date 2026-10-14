@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+	<!-- Cześć! This website is built with Github Page, you should check it out!! -->
+	<head>
+		<title>Mangrove | css-html24</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Website dedicated to css-html2024 & SpreadingIllogical">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			@import url('https://fonts.googleapis.com/css2?family=Abel&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+			@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");	
+		</style>
+		<style>
+		  	body {
+				margin: 0;
+				overflow-x: hidden;
+				background: #757461;
+				color: white;
+				font-family: "Roboto", sans-serif;
+			}
+			
+			header {
+				position: relative;
+				height: 100dvh;
+				min-height: 80dvh;
+				width: 100%;
+				overflow: hidden;
+			}
+
+			.header_filter {
+				position: absolute;
+				inset: 0;
+				background-image: url("https://r4.wallpaperflare.com/wallpaper/659/153/296/anime-girls-anime-kasane-teto-guitar-cherry-blossom-hd-wallpaper-559779d8705477fe805efc321aeb8045.jpg");
+				background-size: cover;
+				background-position: center;
+				background-attachment: fixed;
+				filter: blur(3px) brightness(70%);
+				z-index: 0;
+			}
+
+			.MOTD_Card {
+				position: absolute;
+				z-index: 1;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				box-sizing: border-box;
+
+				width: 400px;
+				
+				padding: 16px;
+
+				border-radius: 8px;
+				background-color: #fff;
+			}
+			.MOTD_Content {
+				display: block;
+
+				font-family: "Abel", sans-serif;
+				font-size: 180%;
+				color: black;
+			}
+			.MOTD_Attribute {
+				display: block;
+
+				text-align: right;
+				text-decoration: none;
+				color: gray;
+			}
+			.MOTD_Attribute::before {content: "--"}
+
+			#social_medias {
+				display: flex;
+				box-sizing: border-box;
+
+				padding: 8px;
+				margin: 16px auto;
+
+				width: fit-content;
+
+				background-color: #faebd7;
+				backdrop-filter: blur(4px);
+				box-shadow: 4px 4px 4px #4b4a4d;
+
+				border-radius: 16px;
+				
+				gap: 8px;
+			}
+			#social_medias > a {
+				font-size: 200%;
+				color: rgb(85, 85, 85);
+				text-decoration: none;
+				align-items: center;
+				display: flex;
+			}
+
+			.Headline {
+				text-align: center;
+				margin: 8px 0;
+			}
+			.About_Me {
+				background: #756a61af;
+				backdrop-filter: blur(4px);
+				border-radius: 48px;
+    		    box-shadow: 4px 4px 4px #4b4a4d;
+
+				display: block;
+				box-sizing: border-box;
+				margin: auto;
+				padding: 16px;
+
+				width: 80%;
+				max-width: 640px;
+				aspect-ratio: 4 / 3;
+			}
+			.About_Me > p {
+				white-space: pre-line;
+			}
+			.Projects {
+				text-align: center;
+			}
+			footer {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				height: 10vh;
+				margin: 2px 12px;
+				margin-top: 20vh;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+		    <div class=header_filter></div>
+			<div class="MOTD_Card">
+				<span class="MOTD_Content">...I can see in the dark, you know!<br> The question is...<br>Can you?</span>
+				<a class="MOTD_Attribute" hreacf="https://youtu.be/MAfd02R8W-U?t=1536">Shadow Mantle Holder, DELTARUNE</a>
+			</div>
+		</header>
+		<div class="Intro">
+			<h1 class="Headline">This is Mangrove, SpreadingIllogical's page</h1>
+			<div class="About_Me">
+    			<h1 class="Headline">About Me...</h1>
+    			<p>
+    			Hi! I'm <b>SpreadingIllogical</b>, or <b>Slogical</b>, known with the username <i>css_html2024</i>.
+    			I'm a secondary school student in &#x1F1ED;&#x1F1F0; HK, which has a great <b>passion in Computer Science, Information Technology and a teeny electronics engineering</b> (?)
+    			Being a hobbyist, I mainly uses <b>Python, JavaScript, Lua, Rust</b> (and maybe some <b>C++</b>) for my programs, but my main focus on front-end web structure are <b>HTML, CSS & JS</b> and SQL & express.js for back-end.
+    			
+    			Little known fact: I do luv Kasane Teto, specifically the UTAU ver. :D
+    			</p>
+    		</div>
+    		<div id="social_medias">
+    			<a href="https://github.com/css-html2024">
+    				<i class="bi bi-github"></i>
+    			</a>
+    			<a href="https://youtube.com/@SpreadingIllogical">
+    				<i class="bi bi-youtube"></i>
+    			</a>
+    			<a href="https://www.youtube.com/watch?v=rGmiPTmj8eM">
+    				<img style="width: 1em; height: 1em" src="https://googlegiggles.com/favicon.jpg"></img>
+    			</a>
+    		</div>
+		</div>
+		<div class="Projects">
+			<h2 class="Headline">Cool projects you should check out!!</h2>
+			<span style="font-style: italic; color:#c8c6a7">Stay tuned!</span>
+		</div>
+		<footer>
+			<span>Mangrove is made with &#x2764;&#xfe0f; by Slogical.</span>
+			<span><img alt="AI assist Badge" src="https://www.aihonestybadge.com/badges/ai-assisted-small.svg"> This website is built with the help of AI. <a href="how-i-use-ai">See how.</a></span>
+		</footer>
+		<script src="project-showcase.js"></script>
+	</body>
+</html>
+
