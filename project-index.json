@@ -1,0 +1,20 @@
+[
+    {
+        "project-name": "mangrove",
+        "pretty-name": "Mangrove",
+
+        "description": "You are here right now!",
+        "thumbnail-url": "https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fahmedmansouri.medium.com%2Fall-details-you-need-to-know-about-localhost-in-linux-b45f0bf54de0&opi=89978449",
+        
+        "development-status": "active"
+    },
+    {
+        "project-name": "dummy",
+        "pretty-name": "Dummy Project",
+
+        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, impedit!",
+        "thumbnail-url": "https://dummyimage.com/600x400/7db58e/fff.jpg&text=Insert+perfect+dummy+image",
+
+        "development-status": "obliterated"
+    }
+]
