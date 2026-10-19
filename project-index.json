@@ -1,20 +1,26 @@
 [
-    {
-        "project-name": "mangrove",
-        "pretty-name": "Mangrove",
-
-        "description": "You are here right now!",
-        "thumbnail-url": "https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fahmedmansouri.medium.com%2Fall-details-you-need-to-know-about-localhost-in-linux-b45f0bf54de0&opi=89978449",
-        
-        "development-status": "active"
-    },
-    {
-        "project-name": "dummy",
-        "pretty-name": "Dummy Project",
-
-        "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, impedit!",
-        "thumbnail-url": "https://dummyimage.com/600x400/7db58e/fff.jpg&text=Insert+perfect+dummy+image",
-
-        "development-status": "obliterated"
-    }
+  {
+    "project-name": "mangrove",
+    "pretty-name": "Mangrove",
+    "description": "You are here right now!",
+    "thumbnail-url": "https://miro.medium.com/v2/resize:fit:1100/format:webp/1*nn41PyRygO_oTmiDvLJbZA.png",
+    "project-url": "https://css-html2024.github.io",
+    "development-status": "active"
+  },
+  {
+    "project-name": "dummy",
+    "pretty-name": "Dummy Project",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quibusdam, impedit!",
+    "thumbnail-url": "https://dummyimage.com/600x400/7db58e/fff.jpg&text=Insert+perfect+dummy+image",
+    "project-url": "https://kasanete.to",
+    "development-status": "obliterated"
+  },
+  {
+    "project-name": "cwport",
+    "pretty-name": "ClassworkPort",
+    "description": "A in-development homework & task sharing platform",
+    "thumbnail-url": "https://dummyimage.com/600x400/d4c1c1/fff.jpg&text=Classwork+port+on+his+way...",
+    "project-url": "https://github.com/css-html2024/cwport",
+    "development-status": "active"
+  }
 ]

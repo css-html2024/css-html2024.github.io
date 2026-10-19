@@ -19,8 +19,8 @@
 
             user-select: none;
         }
-        
-        div {
+
+        body > div, #ProjectShowcase {
             position: relative;
                 
             box-sizing: border-box;
@@ -43,37 +43,152 @@
             color: #717171;
             line-height: 1px;
         }
+
+        #Projects {
+            margin: auto;   
+            width: 60dvw;
+            min-width: 240px;
+            aspect-ratio: 3 / 2;
+        }
+        #ProjectShowcase {
+            position: relative;
+            margin: auto;
+            padding: 0;
+            height: 100%;
+            width: 100%;
+
+            background-color: #2A2A2A;
+        }
+        #ProjectShowcase > .ProjectShowcase {
+            border: none;
+        }
+
+        #ProjectShowcase > .showcase-controls {
+            position: absolute;
+            display: flex;
+            inset: auto 12px 16px;
+            justify-content: space-between;
+            align-content: center;
+            background-color: #7171713a;
+            opacity: 0;
+            transition: opacity 0.2s ease-in-out; 
+            z-index: 3;
+        }
+        #ProjectShowcase:hover > .showcase-controls {
+            opacity: 1;
+        }
+        .ProjectShowcase > .project-card {
+            height: 100%;
+            width: 100%;
+            margin: 0 1dvw;
+
+            text-wrap: nowrap;
+            overflow: hidden;
+        }
+        .project-card > .upper-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .project-name {
+            display: block;
+            width: 50%;
+
+            font-size: 1.3em;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .project-description {
+            display: block;
+
+            width: 100%;
+
+            color: #efeded;
+            overflow: hidden;
+            text-overflow: ellipsis;
+
+        }
+        .project-status {
+            background-color: #f7768e;
+
+            box-sizing: border-box;
+            padding: 4px;
+
+            border-radius: 16;
+
+            height: 2em;
+            width: 6em;
+
+            font-size: 60%;
+            text-align: center;
+        }
+
+        .project-thumbnail {
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            height: 100%;
+            width: 100%;
+            z-index: 2;
+
+            background-position: center;
+            background-size: cover;
+        }
+
+        #ProjectShowcase > .timer-bar {
+            position: absolute;
+            inset: auto 0 0;
+            margin: 4px;
+            padding: 0;
+            height: 6px;
+
+            border: 1px solid #1c1d223a;
+
+            z-index: 3;
+        }
+        #TimeProgress {
+            display: block;
+
+            width: 0%;
+            height: 100%;
+
+            background: #f7768e;
+        }
+
         a {
             color: #75b5aa;
         }
 
         p { 
-            white-space: pre-line;
             margin: 0;
+
+            white-space: pre-line;
         }
 
         .trivia {
             text-decoration: underline dotted;
+
             user-select: text;
             cursor: help;
         }
 
         #Social_Media {
             display: flex;
+
             gap: 8px;
         }
-        #Social_Media > a {
+        #Social_Media > a { 
+            display: flex;
+            align-items: center;
+
             font-size: 200%;
             color: #FFFFFF;
             text-decoration: none;
-            align-items: center;
-            display: flex;
         }
 
         footer {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            position: relative;
             height: 10vh;
             margin: 2px 12px;
             margin-top: 20vh;
@@ -88,9 +203,9 @@
         <p>Hi! I'm <b>SpreadingIllogical</b>, or <b>Slogical</b>, known with the username <i>css_html2024</i>.
 
             I'm a secondary school student in &#x1F1ED;&#x1F1F0; HK, which has a great <b>passion for Computer Science, Information Technology and a teeny bit of electronics engineering</b> (?)
-            Being a hobbyist, I mainly use <b>Python, JavaScript, Lua, Rust</b> (and maybe some <b>C++</b>) for my programs, but my main focus on front-end web structure is <b>HTML, CSS & JS</b> and SQL & express.js for back-end.
+            Being a hobbyist, I mainly use <b>Python, JavaScript, Lua, Rust</b> (and maybe some <b>C++</b>) for my programs, but my main focus on <span class="trivia" data-definition="In software development, front end refers to the presentation layer that users interact with.">front-end</span> web structure is <b>HTML, CSS & JS</b> and SQL & express.js for <span class="trivia" data-definition="In software development, back end refers to the data management and processing behind the scenes.">back-end</span>.
             
-            Little-known fact: I do luv <span class="trivia">Kasane Teto</span>, specifically the UTAU ver. :D
+            Little-known fact: I do luv <span class="trivia" data-definition="Kasane Teto is a virtual singer with voicebanks for several singing voice synthesizers.">Kasane Teto</span>, specifically the UTAU ver. :D
         </p>
         <img src="src/ralsei_splat.png" alt="Ralsei Splat Haha">
         <!-- hey raly -->
@@ -103,23 +218,50 @@
         <a href="https://youtube.com/@SpreadingIllogical">
             <i class="bi bi-youtube"></i>
         </a>
+        <a href="https://instagram.com/spreadingillogical">
+            <i class="bi bi-instagram"></i>
+        </a>
         <a href="https://www.youtube.com/watch?v=rGmiPTmj8eM">
             <img style="width: 1em; height: 1em" src="https://googlegiggles.com/favicon.jpg"></img>
         </a>
     </div>
     <div id="Projects">
         <span class="section_title">Projects</span>
+
         <span id="placeloading_text">Projects will be en route to here...</span>
-        <!-- <div id="ProjectShowcase"></div> -->
+
+        <div id="ProjectShowcase">
+            <a href="how-i-use-ai/" class="project-thumbnail"></a>
+            <div class="ProjectShowcase showcase-controls">
+                <button class="ProjectShowcase" id="PreviousSlide" type="button" aria-label="Previous project">←</button>
+                <div class="ProjectShowcase project-card">
+                    <div class="upper-line">
+                        <span class="project-name">Gosig</span>
+                        <span class="project-status">Inactive</span>
+                    </div>
+                    <span class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing.</span>
+                </div>
+                <!-- abandoned remaining time indicator in seconds -->
+                <span class="ProjectShowcase" id="SlideTimeRemaining" style="display: none;">10s</span>
+                <button class="ProjectShowcase" id="NextSlide" type="button" aria-label="Next project">→</button>
+            </div>
+            <div class="ProjectShowcase timer-bar" aria-hidden="true">
+                <span id="TimeProgress"></span>
+            </div>
+        </div>
+        <script src="project-showcase.js"></script>
     </div>
     <div id="Other">
         <span class="section_title">Other stuff</span>
         <a href="other-page-styles/original.html">First Mangrove Design</a>
     </div>
     <footer>
-        <span>Mangrove is made with &#x2764;&#xfe0f; by Slogical.</span>
-        Please be noted that this page is still in W.I.P.!!
-        <span><img alt="AI assist Badge" src="https://www.aihonestybadge.com/badges/ai-assisted-small.svg"> This website is built with the help of AI. <a href="how-i-use-ai">See how.</a></span>
+        <img src="/src/mini-teto.png" style="width: 10dvw; opacity: 0.25;">
+        <div style="display: flex; justify-content: space-between; align-items: center;">
+            <span>Mangrove is made with &#x2764;&#xfe0f; by Slogical.</span>
+            Please be noted that this page is still in W.I.P.!!
+            <span><img alt="AI assist Badge" src="https://www.aihonestybadge.com/badges/ai-assisted-small.svg"> This page is built with the help of AI. <a href="how-i-use-ai">See how.</a></span>
+        </div>
     </footer>
 </body>
 </html>
